@@ -6,10 +6,10 @@ from mcpi.event import ChatEvent
 from .insultBot import InsultBot
 from .TNTBot import TNTBot
 from .OracleBot import OracleBot
-from .sheepBot import SheepBot
+from .followBot import BlockFollowerBot  # Cambiado para reflejar el nuevo bot
 from .rainbowBot import create_rainbow
 from .houseBot import HouseBot
-from .emotionsBot import ask
+
 
 class CommandHandler:
     def __init__(self, mc):
@@ -36,7 +36,7 @@ class CommandHandler:
         if command:
             command["function"](*args)
         #else:
-           # self.mc.postToChat(f"Unknown command: {name}. Type '--help' for a list of commands.")
+            #self.mc.postToChat(f"Unknown command: {name}. Type '--help' for a list of commands.")
 
     def show_help(self):
         """
@@ -45,30 +45,29 @@ class CommandHandler:
         self.mc.postToChat("Commands available:")
         for name, details in self.commands.items():
             if name != "--help":
-             self.mc.postToChat(f"{name}: {details['description']}")
+                self.mc.postToChat(f"{name}: {details['description']}")
 
-# Main 
+
+# Main
 def main():
-    # Connexion al servidor Minecraft 
+    # Connexion al servidor Minecraft
     mc = minecraft.Minecraft.create()
 
     # Crear instancia del CommandHandler
     handler = CommandHandler(mc)
 
-    # Registrar comandos 
+    # Registrar comandos
     handler.register_command("--help", handler.show_help)
     handler.register_command("insultbot", lambda: InsultBot(mc).start_insulting(1), "Start InsultBot")
-    handler.register_command("tntbot", lambda: TNTBot(mc).deploy_near_player(count=3), "Deploy TNTBot")
+    handler.register_command("tntbot", lambda: TNTBot(mc).deploy_near_player(count=10), "Deploy TNTBot")
     handler.register_command("oraclebot", lambda: OracleBot(mc).listen_and_respond(), "Start OracleBot")
-    handler.register_command("rainbow", lambda: create_rainbow(mc), "Create a rainbow")
-    handler.register_command("sheepbot", lambda: SheepBot(mc).spawn_sheep_statue_near_player(), "Spawn sheep statues")
+    handler.register_command("rainbowbot", lambda: create_rainbow(), "Create a rainbow")
     handler.register_command("housebot", lambda: HouseBot(mc).build_house(mc.player.getTilePos().x + 2, 
                                                                           mc.player.getTilePos().y, 
                                                                           mc.player.getTilePos().z + 2), 
                              "Create a house")
-    handler.register_command("emotions", lambda: ask(mc), "Asking how are you")
 
-    # mensaje inicial 
+    # mensaje inicial
     mc.postToChat("Welcome to Minecraft! Type '--help' to see available commands.")
 
     while True:
@@ -77,7 +76,7 @@ def main():
 
         for event in chat_events:
             if event.type == ChatEvent.POST:
-                # extraer comando y argumentos 
+                # extraer comando y argumentos
                 message = event.message.strip().lower()
                 parts = message.split(" ")
                 command_name = parts[0]
@@ -86,8 +85,9 @@ def main():
                 # ejecutar comanda
                 handler.execute_command(command_name, *arguments)
 
-        time.sleep(1)  
+        time.sleep(1)
 
-# Ejecutar programa 
+
+# Ejecutar programa
 if __name__ == "__main__":
     main()
