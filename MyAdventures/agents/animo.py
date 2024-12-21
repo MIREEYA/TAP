@@ -32,6 +32,8 @@ class Animo:
                 elif negative_responses:
                     mc.postToChat("I'm sorry to hear that.")
                     break  # Termina la función después de responder
+                else
+                    mc.postToChat("I don't understand you")
 
             time.sleep(1)  # Espera un segundo antes de revisar nuevamente
 
