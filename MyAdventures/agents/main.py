@@ -9,6 +9,7 @@ from .OracleBot import OracleBot
 from .sheepBot import SheepBot
 from .rainbowBot import create_rainbow
 from .houseBot import HouseBot
+from .emotionsBot import ask
 
 class CommandHandler:
     def __init__(self, mc):
@@ -65,6 +66,7 @@ def main():
                                                                           mc.player.getTilePos().y, 
                                                                           mc.player.getTilePos().z + 2), 
                              "Create a house")
+    handler.register_command("emotions", lambda: ask(mc), "Asking how are you")
 
     # mensaje inicial 
     mc.postToChat("Welcome to Minecraft! Type '--help' to see available commands.")
