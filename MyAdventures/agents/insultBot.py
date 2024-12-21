@@ -1,6 +1,5 @@
 import random, time
 import mcpi.minecraft as minecraft
-import mcpi.block as block
 
 # Conectar con Minecraft
 mc = minecraft.Minecraft.create()

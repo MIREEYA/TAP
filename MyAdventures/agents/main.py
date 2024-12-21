@@ -6,7 +6,6 @@ from mcpi.event import ChatEvent
 from .insultBot import InsultBot
 from .TNTBot import TNTBot
 from .OracleBot import OracleBot
-from .followBot import BlockFollowerBot  # Cambiado para reflejar el nuevo bot
 from .rainbowBot import create_rainbow
 from .houseBot import HouseBot
 
@@ -60,8 +59,8 @@ def main():
     handler.register_command("--help", handler.show_help)
     handler.register_command("insultbot", lambda: InsultBot(mc).start_insulting(1), "Start InsultBot")
     handler.register_command("tntbot", lambda: TNTBot(mc).deploy_near_player(count=10), "Deploy TNTBot")
-    handler.register_command("oraclebot", lambda: OracleBot(mc).listen_and_respond(), "Start OracleBot")
-    handler.register_command("rainbowbot", lambda: create_rainbow(), "Create a rainbow")
+    handler.register_command("oraclebot", lambda: OracleBot().listen_and_respond(), "Start OracleBot")
+    handler.register_command("rainbowbot", lambda: create_rainbow(mc), "Create a rainbow")
     handler.register_command("housebot", lambda: HouseBot(mc).build_house(mc.player.getTilePos().x + 2, 
                                                                           mc.player.getTilePos().y, 
                                                                           mc.player.getTilePos().z + 2), 
