@@ -8,7 +8,7 @@ mc = minecraft.Minecraft.create()
 positive_words = ["happy", "okey", "good", "fantastic", "excellent", "great", "excited", "amazing"]
 negative_words = ["sad", "bad", "depressed", "bored", "angry", "annoyed","cooked","dead"]
 
-class Animo:
+class Emotion:
     def ask(self):
         # Pregunta al jugador
         mc.postToChat("How are you today? (Type something)")
@@ -38,5 +38,5 @@ class Animo:
             time.sleep(1)  # Espera un segundo antes de revisar nuevamente
 
 # Crear una instancia de la clase y llamar a la función
-animo = Animo()
+animo = Emotion()
 animo.ask()
