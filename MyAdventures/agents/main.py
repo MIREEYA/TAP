@@ -8,6 +8,7 @@ from .TNTBot import TNTBot
 from .OracleBot import OracleBot
 from .rainbowBot import create_rainbow
 from .houseBot import HouseBot
+from .emotionsBot import Emotion
 
 
 class CommandHandler:
@@ -65,6 +66,7 @@ def main():
                                                                           mc.player.getTilePos().y, 
                                                                           mc.player.getTilePos().z + 2), 
                              "Create a house")
+    handler.register_command("emotionsbot", lambda: Emotion(mc).ask(), "Start EmotionsBot")
 
     # mensaje inicial
     mc.postToChat("Welcome to Minecraft! Type '--help' to see available commands.")
