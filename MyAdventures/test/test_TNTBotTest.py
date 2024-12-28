@@ -1,6 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
 from agents.TNTBot import TNTBot
+import pytest
 
 class TestTNTBot(unittest.TestCase):
     def setUp(self):

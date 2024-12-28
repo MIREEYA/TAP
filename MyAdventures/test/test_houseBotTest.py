@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import MagicMock
 from agents.houseBot import HouseBot 
 import mcpi.block as block
+import pytest
 
 class TestHouseBot(unittest.TestCase):
     def setUp(self):

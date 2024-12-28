@@ -1,7 +1,9 @@
 # agents/test/OracleBotTest.py
 import unittest
 from unittest.mock import MagicMock
-from agents.OracleBot import OracleBot  
+from agents.OracleBot import OracleBot 
+import pytest
+
 
 class TestOracleBot(unittest.TestCase):
     def setUp(self):

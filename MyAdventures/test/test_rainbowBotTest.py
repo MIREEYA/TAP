@@ -1,6 +1,8 @@
 import unittest
 from unittest.mock import MagicMock
 import math
+import pytest
+
 from agents.rainbowBot import RainbowBot  # Importación correcta de la clase
 
 # Definimos el test de RainbowBot

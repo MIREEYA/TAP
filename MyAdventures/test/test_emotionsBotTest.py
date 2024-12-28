@@ -1,6 +1,8 @@
 import unittest
 from unittest.mock import MagicMock
 from agents.emotionsBot import Emotion
+import pytest
+
 
 class TestEmotion(unittest.TestCase):
     def setUp(self):

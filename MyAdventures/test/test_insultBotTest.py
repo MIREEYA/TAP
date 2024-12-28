@@ -1,6 +1,8 @@
 import unittest
 from unittest.mock import MagicMock
 from agents.insultBot import InsultBot 
+import pytest
+
 
 class TestInsultBot(unittest.TestCase):
     def setUp(self):
