@@ -21,7 +21,8 @@ jobs:
       with:
         python-version: '3.12'
 
-    run: ls -R
+    - name: List files
+      run: ls -R
 
     - name: Install dependencies
       run: |
@@ -30,4 +31,3 @@ jobs:
 
     - name: Run tests
       run: pytest test/
-      - name: List files
