@@ -2,13 +2,16 @@ import time
 import mcpi.minecraft as minecraft
 import mcpi.block as block
 
-# Conexión a Minecraft
-mc = minecraft.Minecraft.create()
+
 
 class TNTBot:
-    def __init__(self, mc):
-        self.mc = mc
-        self.delay = 2  # Tiempo entre la colocación y la activación
+    def __init__(self, mc=None):
+        if mc is None:
+            import mcpi.minecraft as minecraft
+            self.mc = minecraft.Minecraft.create()
+        else:
+            self.mc = mc
+        
 
     def place_tnt(self, x, y, z):
         """Coloca TNT en la posición especificada y lo activa."""

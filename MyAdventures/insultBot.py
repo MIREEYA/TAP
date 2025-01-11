@@ -1,13 +1,16 @@
 import random, time
 import mcpi.minecraft as minecraft
 
-# Conectar con Minecraft
-mc = minecraft.Minecraft.create()
 
 # Clase InsultBot
 class InsultBot:
     def __init__(self, mc):
+        if mc is None:
+            self.mc = minecraft.Minecraft.create()
+        else:
+            self.mc = mc
         self.mc = mc
+
         self.insults = [
             "You look easy to draw",
             "I've seen dirt blocks more creative than you!",
