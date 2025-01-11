@@ -1,14 +1,18 @@
 import unittest
 from unittest.mock import MagicMock
-from MyAdventures.agents.emotionsBot import Emotion
-import pytest
+from MyAdventures.agents.emotionsBot import Emotion  # Asegúrate de importar correctamente tu clase Emotion
 
 
 class TestEmotion(unittest.TestCase):
-    def __init__(self, mc):
-            self.mc = mc
-            self.delay = 2  # Tiempo entre la colocación y la activación
+    def setUp(self):
+        # Inicializamos el mock para la conexión de Minecraft
+        self.mc_mock = MagicMock()
+        
+        # Creamos una instancia de la clase Emotion, pasando el mock de Minecraft
+        self.emotion = Emotion(self.mc_mock)
 
+        # Configuramos los valores que se van a usar en las pruebas
+        self.delay = 2  # Tiempo entre la colocación y la activación
 
     def test_positive_response(self):
         # Creamos un mensaje simulado que contiene una palabra positiva
@@ -61,6 +65,7 @@ class TestEmotion(unittest.TestCase):
 
         # Verificamos que se haya enviado solo la pregunta
         self.mc_mock.postToChat.assert_any_call("How are you today? (Type something)")
+
 
 if __name__ == '__main__':
     unittest.main()
