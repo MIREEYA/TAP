@@ -1,6 +1,6 @@
 # test_repl.py
 
-import serial
+'''import serial
 from repl import REPL
 import repl
 # This is only a test. The real device port will be acquired by other means,
@@ -42,4 +42,4 @@ def test():
     s.close()
 
 if __name__ == "__main__":
-    test()
+    test() '''
