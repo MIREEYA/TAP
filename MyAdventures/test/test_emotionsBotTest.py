@@ -5,12 +5,10 @@ import pytest
 
 
 class TestEmotion(unittest.TestCase):
-    def setUp(self):
-        # Creamos un mock para la clase Minecraft
-        self.mc_mock = MagicMock()
-        
-        # Creamos un objeto Emotion y le pasamos el mock de Minecraft
-        self.emotion = Emotion(mc=self.mc_mock)
+    def __init__(self, mc):
+            self.mc = mc
+            self.delay = 2  # Tiempo entre la colocación y la activación
+
 
     def test_positive_response(self):
         # Creamos un mensaje simulado que contiene una palabra positiva
