@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock
-from agents.houseBot import HouseBot 
+from MyAdventures.agents.houseBot import HouseBot 
 import mcpi.block as block
 import pytest
 

@@ -1,7 +1,7 @@
 # agents/test/OracleBotTest.py
 import unittest
 from unittest.mock import MagicMock
-from agents.OracleBot import OracleBot 
+from MyAdventures.agents.OracleBot import OracleBot 
 import pytest
 
 

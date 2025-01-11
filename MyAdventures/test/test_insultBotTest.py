@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock
-from agents.insultBot import InsultBot 
+from MyAdventures.agents.insultBot import InsultBot 
 import pytest
 
 
