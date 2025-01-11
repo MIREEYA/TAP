@@ -3,7 +3,7 @@
 #----- CONFIG -----------------------------------------------------------------
 
 ##DEVICE_NAME = "whaleygeek's awesome microbit"
-DEVICE_NAME = "micro:bit"
+'''DEVICE_NAME = "micro:bit"
 DEBUG = False
 BAUD = 115200
 
@@ -134,4 +134,4 @@ info("Your %s has been detected" % DEVICE_NAME)
 info("Now running your program")
 
 
-# END
+# END '''
