@@ -3,6 +3,8 @@
 
 This repository contains the configuration for setting up a Minecraft server for practice purposes. The server provided is from the [Adventures in Minecraft GitHub](https://github.com/AdventuresInMinecraft/AdventuresInMinecraft-Linux).
 
+[![Run Python Tests](https://github.com/MIREEYA/TAP/actions/workflows/tests.yml/badge.svg)](https://github.com/MIREEYA/TAP/actions/workflows/tests.yml)
+
 ## Installation
 
 ### Clone the Repository
