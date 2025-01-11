@@ -11,7 +11,7 @@
 #   write(bytes)
 #   read()->bytes
 
-import time
+''' import time
 import re
 
 class REPLException(Exception):
@@ -180,3 +180,4 @@ class REPL():
         return output_text
 
 # END
+'''
