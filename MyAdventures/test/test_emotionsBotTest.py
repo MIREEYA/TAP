@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock
-from MyAdventures.agents.TNTBot import TNTBot
+from MyAdventures.agents.emotionsBot import Emotion
 import pytest
 
 
