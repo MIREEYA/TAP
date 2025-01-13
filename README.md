@@ -53,4 +53,3 @@ If the default memory of 1024 MB is not enough for your tasks, you can modify it
 
 ## Folder agents
 We have the code in a folder name agents. This folder is inside the folder "MyAdventures".
-## asi??
