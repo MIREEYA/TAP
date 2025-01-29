@@ -1,0 +1,59 @@
+Documentación para ejecutar main.py y usar los comandos en el chat
+
+1. Estructura del Proyecto agents:
+   El proyecto tiene la siguiente estructura básica de archivos:
+   - main.py: El archivo principal que ejecuta el código.
+   - AgentFramework.py: El marco que gestiona los agentes y su ciclo de vida.
+   - Bots: Contiene los bots como InsultBot, OracleBot, EmotionBot, etc.
+
+2. Ejecución del archivo main.py:
+   Para ejecutar el archivo main.py, abre una terminal o línea de comandos en el directorio raíz del proyecto y ejecuta el siguiente comando:
+   python -m agents.main
+
+   Asegúrate de que tu servidor de Minecraft esté corriendo y sea accesible para que el código pueda interactuar con él.
+
+3. Comandos en el chat de Minecraft:
+   Una vez que estés dentro de Minecraft y el bot esté corriendo, ejecutará welcome.py, que bloquea el proceso con un 
+   thread hasta que escribas tu nombre
+   
+   Después puedes usar los siguientes comandos en el chat para interactuar con los agentes:
+
+   - `--help`: Muestra todos los comandos disponibles.
+   - `[agent_name]`: Inicia un agente registrado. Ejemplo: `insultbot` para iniciar el InsultBot.
+   - `insultbot`: Inicia el InsultBot para que te insulte cada 8 segundos.
+   - `tntbot`: Despliega TNT cerca del jugador usando TNTBot.
+   - `oraclebot`: Inicia OracleBot. Este bot responde preguntas como "what's your name", "how are you", etc.
+   - `emotionbot`: Inicia EmotionBot. Responde según las emociones detectadas en los mensajes, como "I'm happy for you!" o "I'm sorry to hear that.".
+   - `housebot`: Crea una casa cerca del jugador.
+   - `changehouse`: Cambia los bloques de una casa.
+
+   ! importante: oraclebot se ejecuta indefinidamente cuando lo llamas, para detenerlo y volver al main hay que ejecutar:
+   - `bye`: Detiene OracleBot.
+
+Aquí tienes un resumen simple y conciso para añadir al archivo `.txt`:
+
+---
+
+Sobre el AgentFramework.py:
+
+- gestiona el ciclo de vida de los agentes en hilos paralelos. 
+- Los agentes deben heredar de la clase Agent.
+
+CLASES PRINCIPALES
+
+1. AgentFramework:
+   - register_agent(agent): Registra un agente en el framework.
+   - unregister_agent(agent): Elimina un agente del framework.
+   - run_agents(): Inicia todos los agentes en hilos separados.
+   - stop_agents(): Detiene todos los agentes.
+
+2. Agent:
+   - start(): Inicia la ejecución del agente.
+   - run(): Bucle principal del agente, donde se define su comportamiento.
+   - stop(): Detiene la ejecución del agente.
+
+#### Flujo de ejecución:
+1. Registrar agentes: Añadir agentes al framework con register_agent().
+2. Ejecutar agentes: Llamar a run_agents() para ejecutar todos los agentes en paralelo.
+3. Detener agentes: Llamar a stop_agents() para detener todos los agentes.
+
