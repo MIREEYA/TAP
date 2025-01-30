@@ -1,7 +1,6 @@
 
 
 [![Run Python Tests](https://github.com/MIREEYA/TAP/actions/workflows/tests.yml/badge.svg)](https://github.com/MIREEYA/TAP/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/MIREEYA/TAP/branch/main/graph/badge.svg)](https://codecov.io/gh/MIREEYA/TAP)
 
 
 
