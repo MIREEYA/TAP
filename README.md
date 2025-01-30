@@ -1,9 +1,7 @@
 
 
 [![Run Python Tests](https://github.com/MIREEYA/TAP/actions/workflows/tests.yml/badge.svg)](https://github.com/MIREEYA/TAP/actions/workflows/tests.yml)
-[![Run Python Tests](https://github.com/MIREEYA/TAP/actions/workflows/tests.yml/badge.svg?event=watch)](https://github.com/MIREEYA/TAP/actions/workflows/tests.yml)
 
-[![Run Python Tests](https://github.com/MIREEYA/TAP/actions/workflows/tests.yml/badge.svg)](https://github.com/MIREEYA/TAP/actions/workflows/tests.yml)
 
 # Minecraft Server Configuration
 
