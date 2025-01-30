@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock
-from agents.emotionsBot import EmotionBot
+from MyAdventures.agents.emotionsBot import EmotionBot
 
 class TestEmotionBot(unittest.TestCase):
     def setUp(self):
