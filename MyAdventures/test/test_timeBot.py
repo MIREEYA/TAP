@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock
-from MyAdventures.agents.timeBot import TimeBot
+from agents.timeBot import TimeBot
 import time
 
 class TestTimeBot(unittest.TestCase):
@@ -29,10 +29,12 @@ class TestTimeBot(unittest.TestCase):
         
         # Hacemos mock de `time.sleep` para que no espere realmente
         with unittest.mock.patch('time.sleep', return_value=None):
-            self.bot.run()  # Ejecutamos el ciclo una vez
+            self.bot.run(iterations=1)  # Ejecutamos solo 1 iteración
 
         # Verificamos que `postToChat` fue llamado con el mensaje correcto
         self.mc_mock.postToChat.assert_called_with("Total time played: 2 minutes.")
+
+
 
 if __name__ == '__main__':
     unittest.main()
