@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
 import mcpi.minecraft as minecraft
-from agents.welcome import Person
+from MyAdventures.agents.welcome import Person
 
 class TestPerson(unittest.TestCase):
     def test_welcome_asks_for_name(self):

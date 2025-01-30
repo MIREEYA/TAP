@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock, patch
 import mcpi.block as block
-from agents.TNTBot import TNTBot
+from MyAdventures.agents.TNTBot import TNTBot
 
 
 class TestTNTBot(unittest.TestCase):

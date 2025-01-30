@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock
-from agents.timeBot import TimeBot
+from MyAdventures.agents.timeBot import TimeBot
 import time
 
 class TestTimeBot(unittest.TestCase):

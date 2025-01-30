@@ -1,6 +1,6 @@
 from unittest.mock import MagicMock
 import unittest
-from agents.OracleBot import OracleBot
+from MyAdventures.agents.OracleBot import OracleBot
 
 class TestOracleBot(unittest.TestCase):
     def setUp(self):
