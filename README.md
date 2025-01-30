@@ -18,10 +18,10 @@ To start the server, execute the appropriate `StartServer` file for your operati
 
 ## Modifying Memory Requirements
 
-# About directory agents
+## About directory agents
 It contains our AgentFramework with our Bots. 
 
-#About directory test
+## About directory test
 It contains the unittest of our Bots.
 
 
