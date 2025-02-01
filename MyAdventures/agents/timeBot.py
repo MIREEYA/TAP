@@ -1,21 +1,26 @@
-import unittest
-from unittest.mock import MagicMock, patch
-from MyAdventures.agents.timeBot import TimeBot
+# timeBot.py
 
-class TestTimeBot(unittest.TestCase):
-    def setUp(self):
-        self.mc_mock = MagicMock()
-        self.bot = TimeBot(self.mc_mock)
-    
-    def test_initial_state(self):
-        self.assertFalse(self.bot.running)
-        self.assertIsInstance(self.bot.start_time, float)
-    
-    def test_stop(self):
-        #ponemos true para simular que esta en ejecucion
-        self.bot.running = True
-        self.bot.stop()
-        self.assertFalse(self.bot.running)
+import time
+import mcpi.minecraft as minecraft
+from .AgentFramework import Agent
 
-if __name__ == '__main__':
-    unittest.main()
+class TimeBot(Agent):#heredar de Agent
+    def __init__(self, mc):
+        super().__init__("TimeBot")  # constructor de Agent
+        self.mc = mc
+        self.start_time = time.time()  # Coger tiempo inicial
+        self.running = False  # bot activado?
+
+    def start(self):
+        self.running = True
+        self.run()      
+   
+    def run(self):
+        while self.running:  
+            seconds = int(time.time() - self.start_time)
+            self.mc.postToChat(f"Total time played: {seconds // 60} minutes.")
+            time.sleep(60)  # esperar 60 seg
+
+    def stop(self):
+        self.running = False
+        #self.mc.postToChat("TimeBot stopped.")
