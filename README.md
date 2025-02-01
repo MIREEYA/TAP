@@ -18,10 +18,8 @@ To start the server, execute the appropriate `StartServer` file for your operati
 - **Linux**: Run `./start.sh` in the terminal
 - **Mac**: Double-click `start.command`
 
-## Modifying Memory Requirements
-
 ## About directory agents
-It contains our AgentFramework with our Bots. 
+This directory contains our Agent Framework along with our bots. For more details about the agents and execution, check MyAdventures/agents/Info.txt.
 
 ## About directory test
 It contains the unittest of our Bots.
