@@ -18,8 +18,8 @@ Documentación para ejecutar main.py y usar los comandos en el chat
    
    Después puedes usar los siguientes comandos en el chat para interactuar con los agentes:
 
-   - `--help`: Muestra todos los comandos disponibles.
    - `[agent_name]`: Inicia un agente registrado. Ejemplo: `insultbot` para iniciar el InsultBot.
+   - `--help`: Muestra todos los comandos disponibles.
    - `insultbot`: Inicia el InsultBot para que te insulte cada 8 segundos.
    - `tntbot`: Despliega TNT cerca del jugador usando TNTBot.
    - `oraclebot`: Inicia OracleBot. Este bot responde preguntas como "what's your name", "how are you", etc.
@@ -27,11 +27,8 @@ Documentación para ejecutar main.py y usar los comandos en el chat
    - `housebot`: Crea una casa cerca del jugador.
    - `changehouse`: Cambia los bloques de una casa.
 
-   ! importante: oraclebot se ejecuta indefinidamente cuando lo llamas, para detenerlo y volver al main hay que ejecutar:
-   - `bye`: Detiene OracleBot.
-
-Aquí tienes un resumen simple y conciso para añadir al archivo `.txt`:
-
+   ! importante: oraclebot y emotionsbot se ejecuta indefinidamente cuando lo llamas, para detenerlo y volver al main hay que ejecutar:
+   - `bye`: Detiene OracleBot/EmotionsBot.
 ---
 
 Sobre el AgentFramework.py:
